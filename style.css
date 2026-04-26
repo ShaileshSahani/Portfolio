@@ -1358,25 +1358,154 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 991px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 52px; }
-  .hero-profile { order: -1; max-width: 380px; margin: 0 auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-profile { order: -1; max-width: 360px; margin: 0 auto; }
   .phase-grid { grid-template-columns: 1fr; }
-  .phase-arrow { transform: rotate(90deg); padding: 12px 0; }
+  .phase-arrow { transform: rotate(90deg); padding: 10px 0; }
   .learn-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Tablet ── */
 @media (max-width: 768px) {
-  .sp { padding: 80px 0; }
-  .highlight-grid { grid-template-columns: 1fr; }
-  .hero-stats { gap: 20px; }
-  .footer-copy { display: none; }
-  .exp-head { flex-direction: column; gap: 8px; }
-  .exp-meta { align-items: flex-start; }
+  .sp { padding: 64px 0; }
+  .sh { margin-bottom: 40px; }
+
+  /* Section titles */
+  .sec-title { font-size: 1.7rem; }
+  .sec-sub   { font-size: 0.88rem; }
+
+  /* Hero */
+  #hero { padding: 100px 0 60px; }
+  .hero-tagline { font-size: 0.92rem; margin-bottom: 28px; }
+  .hero-actions { gap: 8px; margin-bottom: 36px; }
+  .hero-stats   { gap: 16px; padding-top: 14px; }
+  .stat-val     { font-size: 0.95rem; }
+
+  /* Floating badges — tuck them in so they don't overflow */
+  .float-badge       { font-size: 10px; padding: 6px 10px; gap: 5px; }
+  .float-badge-top   { top: -10px; right: -4px; }
+  .float-badge-bot   { bottom: -10px; left: -4px; }
+
+  /* Profile card */
+  .profile-card { padding: 28px 20px 22px; }
+  .avatar-frame { width: 110px; height: 110px; }
+
+  /* Highlight grid */
+  .highlight-grid { grid-template-columns: 1fr; gap: 8px; }
+  .highlight-item { padding: 9px 11px; font-size: 0.82rem; }
+
+  /* Skills */
+  .skill-card { padding: 22px 18px; }
+
+  /* Projects */
+  .project-card { padding: 22px 18px; }
+  .proj-desc { font-size: 0.875rem; }
+
+  /* Experience */
+  .exp-head  { flex-direction: column; gap: 8px; }
+  .exp-meta  { align-items: flex-start; }
+  .exp-box   { padding: 22px 18px; }
+  .exp-bullets li { font-size: 0.875rem; }
+
+  /* Learning / Phases */
+  .phase-card  { padding: 24px 18px; }
+  .phase-title { font-size: 1rem; }
+  .phase-desc  { font-size: 0.875rem; }
+  .learn-box   { padding: 20px 16px; }
+  .check-label { font-size: 0.82rem; }
+  .cert-name   { font-size: 0.82rem; }
+
+  /* Contact */
+  .contact-card { padding: 24px 18px; }
+
+  /* Footer */
+  .footer-copy   { display: none; }
+  .footer-inner  { justify-content: space-between; }
 }
 
+/* ── Mobile ── */
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; }
-  .btn-primary, .btn-secondary, .btn-ghost { width: 100%; justify-content: center; }
-  .hero-roles { flex-direction: column; align-items: flex-start; }
-  .stat-div { display: none; }
+  .sp  { padding: 52px 0; }
+  .sh  { margin-bottom: 32px; }
+
+  /* Hero */
+  #hero { padding: 88px 0 48px; min-height: auto; }
+  .hero-name   { font-size: clamp(2.6rem, 13vw, 3.8rem); margin-bottom: 16px; }
+  .hero-badge  { font-size: 10px; padding: 4px 11px; margin-bottom: 18px; }
+  .hero-tagline { font-size: 0.88rem; margin-bottom: 22px; line-height: 1.68; }
+  .hero-roles  { flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+  .in-transition { font-size: 9px; }
+
+  /* Full-width buttons */
+  .hero-actions { flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .btn-primary, .btn-secondary, .btn-ghost { width: 100%; justify-content: center; padding: 12px 20px; }
+
+  /* Stats bar — hide dividers, tighten gap */
+  .hero-stats { gap: 12px; flex-wrap: wrap; }
+  .stat-div   { display: none; }
+  .stat-val   { font-size: 0.9rem; }
+  .stat-lbl   { font-size: 9px; }
+
+  /* Profile card — tighter on small screens */
+  .hero-profile  { max-width: 100%; }
+  .profile-card  { padding: 24px 16px 18px; border-radius: 16px; }
+  .avatar-frame  { width: 96px; height: 96px; }
+  .profile-name  { font-size: 1.05rem; }
+  .profile-title { font-size: 10px; margin-bottom: 16px; }
+  .profile-chips { gap: 5px; margin-bottom: 18px; }
+  .chip          { font-size: 9px; padding: 3px 9px; }
+  .meta-row      { font-size: 0.78rem; gap: 8px; }
+
+  /* Float badges hidden on very small — they clip */
+  .float-badge   { display: none; }
+  .orbit-ring    { display: none; }
+
+  /* About */
+  .about-card    { padding: 24px 16px; }
+  .about-text p  { font-size: 0.875rem; line-height: 1.72; }
+
+  /* Skills */
+  .skill-card    { padding: 18px 14px; }
+  .skill-cat     { font-size: 0.85rem; }
+  .skill-list li { font-size: 0.82rem; }
+  .bar-label span { font-size: 0.75rem; }
+
+  /* Projects */
+  .project-card  { padding: 18px 14px; }
+  .proj-name     { font-size: 1rem; }
+  .proj-desc     { font-size: 0.84rem; line-height: 1.65; }
+  .proj-stack span { font-size: 10px; padding: 3px 8px; }
+  .proj-gh-link  { font-size: 0.8rem; }
+
+  /* Experience */
+  .exp-box       { padding: 18px 14px; }
+  .exp-role      { font-size: 1rem; }
+  .exp-org       { font-size: 0.78rem; }
+  .exp-date      { font-size: 0.75rem; }
+  .exp-bullets li { font-size: 0.84rem; line-height: 1.65; }
+  .exp-tags span { font-size: 10px; padding: 3px 8px; }
+  .exp-item      { gap: 14px; }
+
+  /* Learning */
+  .phase-card    { padding: 20px 14px; }
+  .phase-num     { font-size: 0.72rem; }
+  .phase-title   { font-size: 0.95rem; }
+  .phase-desc    { font-size: 0.84rem; }
+  .learn-box     { padding: 16px 13px; }
+  .learn-cat     { font-size: 0.84rem; }
+  .check-label   { font-size: 0.8rem; }
+  .check-tag     { font-size: 9px; }
+  .cert-name     { font-size: 0.8rem; }
+  .cert-sub      { font-size: 0.74rem; }
+
+  /* Contact */
+  .contact-card  { padding: 20px 14px; }
+  .social-link   { padding: 10px 12px; font-size: 0.82rem; }
+  .social-icon   { width: 30px; height: 30px; font-size: 0.8rem; }
+  .form-control-custom { padding: 11px 14px; font-size: 0.875rem; }
+
+  /* Footer */
+  .footer-inner  { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footer-brand  { font-size: 0.85rem; }
+  .footer-tag    { display: none; }
 }
